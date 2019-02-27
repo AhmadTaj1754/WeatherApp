@@ -1,0 +1,42 @@
+#main
+{
+  background-color: green;
+}
+
+.header
+{
+  font-weight: bold;
+  text-align: center;
+  padding: 2px;
+  font-size: 20px;
+
+}
+
+h1
+{
+   font-weight: bold;
+  text-align: center;
+  padding: 55px;
+  text-shadow: 2px 2px yellow;
+}
+
+.texts
+{
+  font-size: 15px;
+  text-align: center;
+}
+
+#ico
+{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+#info
+{
+  padding: 70px;
+  font-size: 15px;
+/*   text-align: center; */
+}
