@@ -15,7 +15,7 @@
 
 <div class="container">
 
-      <h1>Weather <i class="fas fa-cloud " style="font-size:60px;color:lightblue;"></i> Bee</h1>
+      <h1>Weather <i class="fas fa-cloud " style="font-size:60px;color:lightblue;"></i> Bee<span id="tm"> ™</span></h1>
 
 
 
@@ -23,11 +23,19 @@
 
    <div class="col-6">  -->
 
+
+
+
  <h2 class="header" id="weathertext">
 
 
-  <button  type="button" onclick="getWeather()">Change Content</button>
+  <button   class="btn btn-success" type="button" onclick="weatherFetcher()">Get Weather</button>
   </h2>
+
+
+ <div class="texts alert alert-info"  id="alerting" role="alert" >
+
+</div>
 
       <div class="texts" id="weatherdesc">
           </div>
@@ -40,14 +48,18 @@
          <img  src="" alt="">
           </div>
 
-     <div id="ico2">
 
-          </div>
 
 <!--   <div class="col-1">
  </div>       -->
 
       <div  id="info">
+          </div>
+
+  <div  id="info">
+          </div>
+
+   <div  id="error">
           </div>
 
 
