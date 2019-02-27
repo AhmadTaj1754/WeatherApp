@@ -41,8 +41,19 @@ function weatherFetcher() {
       $("#ico").append("<img src= '"+image+"' >");
       $("#alerting").text("Hello " + result.name + "!");
 
+//       Details
+      $("#pressure").text("Pressure "+ result.main.pressure);
+      $("#humidity").text("Humidity "+ result.main.humidity);
+      $("#temp_min").text("Low "+ Math.round(result.main.temp_min)+ "º C");
+      $("#temp_max").text("High "+ Math.round(result.main.temp_max) +"º C");
+      $("#visibility").text("Visibility "+ result.visibility);
+      $("#windspeed").text("Wind Speed "+ result.wind.speed);
 
-     $("#info").text(JSON.stringify(result));
+      // $("#winddegree").text("Wind Degree "+ result.wind.deg);
+      $("#sunrise").text("Sunrise "+ result.sys.sunrise);
+      $("#sunset").text("Sunset "+ result.sys.sunset);
+
+
     }
   });
 }
