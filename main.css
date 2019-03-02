@@ -33,6 +33,8 @@ h2
 
 }
 
+
+
 .texts
 {
   font-size: 15px;
@@ -75,9 +77,13 @@ h2
 
 }
 
-#info
+
+
+body
 {
-  padding: 70px;
-  font-size: 15px;
-/*   text-align: center; */
+
+  padding-left: 450px;
+  padding-right: 450px;
+  padding-bottom: 550px;
+
 }
