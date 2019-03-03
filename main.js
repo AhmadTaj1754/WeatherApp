@@ -58,19 +58,23 @@ function weatherFetcher()
 
 
 
-      $("#pressure").text("Pressure "+ result.main.pressure);
-      $("#humidity").text("Humidity "+ result.main.humidity);
-      $("#temp_min").text("Low "+ Math.round(result.main.temp_min)+ "º C");
-      $("#temp_max").text("High "+ Math.round(result.main.temp_max) +"º             C");
-      $("#visibility").text("Visibility "+ result.visibility);
-      $("#windspeed").text("Wind Speed "+ result.wind.speed);
+      $("#pressure").append("<b>Pressure </b>" +  result.main.pressure);
+      $("#humidity").append("<b>Humidity </b>" +  result.main.humidity);
+      $("#temp_min").append("<b>Low </b>" +  Math.round(result.main.temp_min)+ "º C");
+      $("#temp_max").append("<b>High </b>" +  Math.round(result.main.temp_max) +"º C");
+      $("#visibility").append("<b>Visibility </b>" +  result.visibility);
+      $("#windspeed").append("<b>Wind Speed </b>" +  result.wind.speed);
 
       // $("#winddegree").text("Wind Degree "+ result.wind.deg);
 
       //convert  date/ time  -- result.sys.sunrise
 
-//       $("#sunrise").text("Sunrise "+ result.sys.sunrise );
-//       $("#sunset").text("Sunset "+ result.sys.sunset);
+      var sunrise = new Date((result.sys.sunrise * 1000));
+      var sunset = new Date((result.sys.sunset * 1000));
+
+
+      $("#sunrise").append("<b>Sunrise </b>" + sunrise);
+      $("#sunset").append("<b>Sunset </b>" + sunset);
 
 
     }
@@ -86,8 +90,8 @@ function convertToFar()
     TempInCelsiusHigh = Math.round((TempInFarenheitHigh - 32) * (5/9));
 
     document.getElementById("temp").innerHTML = TempInCelsius + "º C";
-    document.getElementById("temp_min").innerHTML = TempInCelsiusLow + "º C";
-    document.getElementById("temp_max").innerHTML = TempInCelsiusHigh + "º C";
+    document.getElementById("temp_min").innerHTML = "<b>Low</b> " + TempInCelsiusLow + "º C";
+    document.getElementById("temp_max").innerHTML = "<b>High</b> " + TempInCelsiusHigh + "º C";
 
 
     IsFar= false;
@@ -100,8 +104,8 @@ function convertToFar()
       TempInFarenheitHigh =  Math.round((TempInCelsiusHigh * (9/5)) + 32);
 
       document.getElementById("temp").innerHTML = TempInFarenheit + "º F";
-      document.getElementById("temp_min").innerHTML = TempInFarenheitLow + "º F";
-      document.getElementById("temp_max").innerHTML = TempInFarenheitHigh + "º F";
+      document.getElementById("temp_min").innerHTML = "<b>Low</b> " + TempInFarenheitLow + "º F";
+      document.getElementById("temp_max").innerHTML = "<b>High</b> " + TempInFarenheitHigh + "º F";
 
 
 
