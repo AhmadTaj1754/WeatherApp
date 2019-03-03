@@ -32,8 +32,11 @@ function showPosition(position) {
 function weatherFetcher()
 {
 
+
+
+
   // var urlString = api + "lat=42.418560" + "&" + "lon=-71.106450";
-  getLocation();
+   getLocation();
    var urlString = api + "lat=" + lat + "&" + "lon=" + lon;
 
   $.ajax
@@ -43,7 +46,6 @@ function weatherFetcher()
     {
 
      TempInCelsius = result.main.temp;
-
      $("#weathertext").text(result.weather[0].main);
      $("#weatherdesc").text(result.weather[0].description);
      $("#temp").text(Math.round(result.main.temp) + "º C");
@@ -76,6 +78,9 @@ function weatherFetcher()
       $("#sunrise").append("<b>Sunrise </b>" + sunrise);
       $("#sunset").append("<b>Sunset </b>" + sunset);
 
+
+       //show detail tab
+      document.getElementById("details").style = "visibility: visible";
 
     }
   });
